@@ -1,0 +1,36 @@
+{%extends 'Reg/layout.html'%}
+
+{%block body%}
+    <div>
+        Name:{{profile.user.lname}}
+    </div>
+    <div>
+        Education:
+        <strong>Manipal University Jaipur</strong>
+        {{profile.user.faculty_stream}}
+        {{profile.user.Degree}}
+        {{profile.user.joining_year}} - {{profile.user.grad_year}}
+    </div>
+
+    <div>
+        Work experience
+
+    </div>
+
+    <div>
+        Basic Info:
+        Location: # use this location to search all the alumni with location show this results in alumni site.
+        Date of birth:{{profile.user.dob}}
+        
+    </div>
+
+    <div>
+        Reg no: {{profile.user.Reg_no}}
+        Role: Alumni
+    </div>
+
+    <div>
+
+    </div>
+
+{%endblock%}

@@ -1,0 +1,53 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{% static 'Reg/css/jobs.css' %}">
+    <title>VIEW</title>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search Jobs">
+      </div>
+ <h1>JOB OPPORTUNITIES</h1>
+
+      {%for job in jobs%}
+
+      <div class="container">
+        <div class="card mx-auto">
+            <div class="row">
+                
+                <div class="header right"><i class="fas fa-ellipsis-h"></i></div>
+            </div>
+            <div class="card-title">
+                <p class="heading">{{job.jobname}}&nbsp;<i class="far fa-compass"></i></p>
+            </div>
+            
+            <p class="text-muted">{{job.desc}}</p>
+            <div class="row btnrow my-4">
+                <div class="col-4 col-md-3"><button type="button" class="btn btn-outline-success btn-sm" style="background: #00ff002b;">{{job.Type}}</button></div>
+                <div class="col-4 col-md-3"><button type="button" class="btn btn-outline-primary btn-sm" style="background: #007bff33;">{{job.duration}}</button></div>
+                <div class="col-4 col-md-3"><button type="button" class="btn btn-outline-danger btn-sm" style="background: #dc35452e;">{{job.salary}}</button></div>
+            </div>
+
+            <div class="mutual"><i class="fas fa-users"></i>&nbsp;&nbsp;<span>5 Friends work here</span></div>
+            <div class="row btnsubmit mt-4">
+                <div class="col-md-6 col-6">
+                   <a href="{{job.link}}"> <button type="button" class="btn btn-primary btn-lg"><span>Apply Now</span></button></a>
+                </div>
+               
+            </div>
+            
+        </div>
+    </div>
+
+
+      {%endfor%}
+
+    <script src="{% static 'Reg/jss/jobs.js' %}"></script>
+</body>
+</html>

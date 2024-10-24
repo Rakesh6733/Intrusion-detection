@@ -1,0 +1,56 @@
+{%extends 'Reg/layout.html'%}
+{% load static %}
+{%block head%}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width,initial-scale=1" name="viewport" />
+  <script src="https://kit.fontawesome.com/4fd880aedc.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'Reg/css/alumni.css' %}">
+  <title>ALUMNI</title>
+{%endblock%}
+
+{%block body%}
+  <header>
+    
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search Alumni">
+    </div>
+
+    <h1>Alumni Information</h1>
+  </header>
+  {%for alumni in alumnis %}
+  <div class="container">
+    <div class="card">
+      <img class="card-img-top"
+        src="https://scontent.fdel27-4.fna.fbcdn.net/v/t1.6435-9/147501021_3510984355793518_755195934486412265_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=qjhOzdkdxm4AX838gRY&_nc_ht=scontent.fdel27-4.fna&oh=00_AfCWbkiVVeazTfGrmmPDceeR0hvWT52gFtvOPHmxm31THA&oe=6444A57A"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><a href="{% url 'profile' alumni.user.id %}">{{alumni.user.fname}} {{alumni.user.lname}}</a></h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{alumni.Reg_no}}</li>
+        <li class="list-group-item">Graduation Year: {{alumni.grad_year}}</li>
+        <li class="list-group-item">Programme/Degree:{{alumni.Degree}} </li>
+        <li class="list-group-item">Job Title:{{alumni.jobtitle}} </li>
+        <p class="card-text">Address:{{alumni.address}}</p>
+      </ul>
+      <div class="card-footer">
+        <a href="#" class="card-link">Readmore</a>
+      </div>
+    </div>
+  {%endfor%}
+  </header>
+
+  <script>
+    var navlinks = document.getElementById("navlinks");
+    function showMenu() {
+      navlinks.style.right = "0";
+    }
+
+    function hideMenu() {
+      navlinks.style.right = "-200px";
+    }
+  </script>
+  <script src="{% static 'Reg/js/alumni.js' %}"></script>
+  
+  {%endblock%}

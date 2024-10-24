@@ -1,0 +1,60 @@
+{%extends 'Reg/layout.html'%}
+{%load static%}
+{%load socialaccount %}
+
+{%block head%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <script src="https://kit.fontawesome.com/4fd880aedc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'Reg/css/login.css' %}">
+    <title>LOGIN</title>
+{%endblock%}
+
+{%block body%}
+
+    {% if message %}
+        <div>{{message}}</div>
+    {%endif%}
+
+<form action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+  
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <span >SIGN UP WITH SOCIALS</span>
+    <div class="social-container">
+        <a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook"></i></i></a>
+        <a href=" {% provider_login_url 'google'%}?next=/" class="social"><i class="fa-brands fa-google-plus-g"></i></i></a>
+        <a href="https://www.linkedin.com/" class="social"><i class="fa-brands fa-linkedin"></i></i></a>
+    </div>
+  
+    <button type="submit">Login</button>
+  </form>
+
+  <content>
+    {%block content%}
+    {%endblock%}
+  </content>
+
+  <script>
+    var navlinks = document.getElementById("navlinks");
+    function showMenu() {
+        navlinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navlinks.style.right = "-200px";
+    }
+</script>
+
+
+<SCRIPT src="{% static 'Reg/js/login.js'%}"></SCRIPT>
+  {%endblock%}
+
+
+
+

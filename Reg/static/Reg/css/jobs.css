@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+/*font-family: 'Tilt Warp', cursive;*/
+
+.search-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+  h1{
+    font-family: 'Tilt Warp', cursive;
+    margin-left: 570px;
+    margin-top: 80px;
+    text-shadow: 2px 2px 4px #000000;
+   
+  }
+body{
+	font-family: arial;
+	
+}
+.logo{
+	border: 1px solid #f6f6f6;
+}
+
+.logo img{
+	width: 60px;
+	height: 60px;
+}
+.card{
+	display: grid;
+	padding: 3vh 2vh 7vh 5vh;
+	border: none;
+	border-radius: 15px;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	max-width: 500px;
+    border: white;
+    box-shadow: #a1a7ae;
+    background-color: royalblue;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-left: 450px;
+
+}
+.header{
+	margin-bottom: 5vh;
+	margin-right: 2vh;
+	float: right;
+	margin-left: auto;
+}
+
+.far{
+	color: rgba(15, 198, 239, 0.97)!important;
+	font-size: 16px!important;
+    
+}
+p.heading{
+	font-weight: bold;
+	font-size: 25px;
+    font-family: 'Tilt Warp', cursive;
+    color: #fff;
+}
+p.text-muted{
+	font-size: 17px;
+	font-weight: bold;
+	color: yellow;
+    font-family: 'Tilt Warp', cursive;
+    
+}
+.btn-sm{
+	border-radius: 8px;
+}
+.fas.fa-users{
+	color: rgba(15, 198, 239, 0.97)!important;
+}
+.mutual span{
+	font-size: 14px;
+	color: #adb5bd;
+	font-weight: bold;
+    font-family: 'Tilt Warp', cursive;
+}
+.btn-primary.btn-lg{
+    
+    border-radius: 30px;
+    width: 90%;
+    border: none;
+    background: #8c02e3;
+    cursor: pointer;
+    
+}
+.btn-dark.btn-lg{
+    border-radius: 30px;
+    width: 90%;
+    border: none;
+    background: #dee2e6;
+}
+.btn-dark span{
+	font-size: 14px;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+.btn-primary span{
+	font-size: 14px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+}
+
+
+
+@media (max-width: 600px) {
+
+
+
+    h1 {
+        margin: 50px auto 30px;
+        text-shadow: 1px 1px 2px #000000;
+        font-size: 36px;
+        text-align: center;
+      }
+    body {
+      font-size: 14px;
+    }
+    .logo img {
+      width: 40px;
+      height: 40px;
+    }
+    .card {
+      padding: 2vh 1vh 5vh 3vh;
+      border-radius: 10px;
+      margin-top: 3%;
+      margin-bottom: 3%;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    .header {
+      margin-right: 1vh;
+    }
+    p.heading {
+      font-size: 20px;
+    }
+    p.text-muted {
+      font-size: 14px;
+    }
+    .btn-sm {
+      font-size: 12px;
+      border-radius: 5px;
+    }
+    .mutual span {
+      font-size: 12px;
+    }
+    .btn-primary.btn-lg,
+    .btn-dark.btn-lg {
+      width: 80%;
+    }
+    .btn-primary span,
+    .btn-dark span {
+      font-size: 12px;
+    }
+   
+        
+      
+  }
+  

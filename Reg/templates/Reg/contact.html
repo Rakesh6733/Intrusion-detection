@@ -1,0 +1,68 @@
+{%extends 'Reg/layout.html'%}
+{%load static%}
+
+
+{%block head%}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4fd880aedc.js" crossorigin="anonymous"></script>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{% static 'Reg/css/contact.css' %}">
+    
+{%endblock%}
+
+{%block body%}
+    <!-------navbar code-->
+    
+    <!--------------navbar code-->
+    <h1>Contact Us</h1>
+    <section class="contact-wrap">
+        <form action="{% url 'contact' %}" class="contact-form" method='POST'>
+            {% csrf_token %}
+            <div class="col-sm-6">
+                <div class="input-block">
+                    <label for="firstNameInput">First Name</label>
+                    <input type="text" name="firstName" id="firstNameInput" class="form-control">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="input-block">
+                    <label for="lastNameInput">Last Name</label>
+                    <input type="text" name="lastName" id="lastNameInput" class="form-control">
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="input-block">
+                    <label for="emailInput">Email</label>
+                    <input type="text" name="email" id="emailInput" class="form-control">
+                </div><br>
+            </div>
+            <div class="col-sm-12">
+                <div class="input-block textarea">
+                    <label for="messageInput">Drop your message here</label>
+                    <textarea rows="3" name="message" id="messageInput" class="form-control"></textarea>
+                </div><br>
+            </div>
+            <div class="col-sm-12">
+                <button type="submit" class="square-button">Send</button>
+            </div>
+        </form>
+    </section>
+    <script src="{% static 'Reg/js/contact.js' %}"></script>
+       
+    <script>
+        var navlinks = document.getElementById("navlinks");
+        function showMenu() {
+            navlinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navlinks.style.right = "-200px";
+        }
+    </script>
+
+
+    {%endblock%}
+
+    
+
+   

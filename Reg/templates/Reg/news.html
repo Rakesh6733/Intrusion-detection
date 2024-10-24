@@ -1,0 +1,53 @@
+{%extends "Reg/layout.html" %}
+{% load static %}
+
+{%block head%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Section</title>
+    <script src="https://kit.fontawesome.com/4fd880aedc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'Reg/css/news.css'%}">
+{%endblock%}
+
+{%block body%}
+
+    <!--------------navbar code-->
+   
+    <!--------------navbar code-->
+    <header>
+        <h1>Latest News</h1>
+    </header>
+    {%for object in news%}
+    <section class="news-container">
+        <article class="news-post">
+            <h2 class="post-title">{{object.title}}</h2>
+            <p class="post-info">
+                <time name="time">{{object.time}}</time>
+                by <a href="#" class="post-author">{{object.name}}</a>
+            </p>
+            <img
+                src="{{object.url}}">
+            <p class="post-content">{{object.content}}</p>
+            <a href="#" class="post-link">Read More</a>
+        </article>
+    
+
+    {%endfor%}
+    </section>
+    <script>
+        var navlinks = document.getElementById("navlinks");
+        function showMenu() {
+            navlinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navlinks.style.right = "-200px";
+        }
+    </script>
+
+{%endblock%}
+    
+    
+
+
+

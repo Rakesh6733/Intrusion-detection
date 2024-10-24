@@ -1,0 +1,9 @@
+{% extends "Reg/layout.html" %}
+{%load crispy_forms_tags%}
+{%block body%}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form|crispy}}
+    <input type="submit" class="" value="Submit">
+</form>
+{%endblock%}

@@ -1,0 +1,134 @@
+{% extends 'Reg/layout.html' %}
+{%load static%}
+
+{%block head%}
+    <title>Multistep Registration Form- Demo Preview</title>
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <script src="https://kit.fontawesome.com/4fd880aedc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'Reg/css/Registration.css' %}">
+    
+
+    {%endblock%}
+
+    {%block body%}
+
+
+     <!--------------navbar code-->
+    <!--------------navbar code-->
+    <div class="content">
+        <!-- Multistep Form -->
+        <div class="main">
+            <form action="{% url "alumni" %}" class="regform" method="POST">
+                {% csrf_token %}
+                <!-- Progressbar -->
+                <ul id="progressbar">
+                    <li id="active1">Create Profile</li>
+                    <li id="active2">Educational Profiles</li>
+                    <li id="active3">Personal Details</li>
+                </ul>
+                <!-- Fieldsets -->
+                <fieldset id="first">
+                    <h2 class="title">Create your Profile</h2>
+                    <p class="subtitle">Step 1</p>
+                    <input class="text_field" name="fname" placeholder="First Name" type="text">
+                    <input class="text_field" name="lname" placeholder="Last Name" type="text">
+                    <input class="text_field" name="email" placeholder="Email" type="email" value="">
+                    <label for="birthday">Birthday:</label>
+                    <input id="birthday" name="dob" placeholder="Date of Birth" Value="DOB" type="date">
+                    <input class="text_field" name="pass" placeholder="Password" type="password" value="">
+                    <input class="text_field" name="cpass" placeholder="Confirm Password" type="password" value="">
+                    
+                    <span >SIGN UP WITH SOCIALS</span>
+                    <div class="social-container">
+                        <a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook"></i></i></a>
+                        <a href="#" class="social"><i class="fa-brands fa-google-plus-g"></i></i></a>
+                        <a href="https://www.linkedin.com/" class="social"><i class="fa-brands fa-linkedin"></i></i></a>
+                    </div>
+                    <input id="next_btn1" onclick="next_step1()" type="button" value="Next">
+                </fieldset>
+                <fieldset id="second">
+                    <h2 class="title">Educational Profiles</h2>
+                    <p class="subtitle">Step 2</p>
+                    <select class="options" name='faculty_stream'>
+                        <option>--Select Faculty--</option>
+                        <option>Faculty of Science</option>
+                        <option>Faculty of Engineering</option>
+                        <option>Faculty of Arts And Law</option>
+                        <option>Faculty of Management</option>
+                        <option>Faculty of Design</option>
+                    </select>
+                    <select class="options" name= 'joining_year'>
+                        <option>--Year Of Joining--</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                    </select>
+                    <select class="options" name="grad_year">
+                        <option>--Graduation Year--</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                    </select>
+                    <input class="text_field" name="Degree" placeholder="Programme/Degree" type="text">
+                    <input class="text_field" name="Reg_no" placeholder="Registration Number" type="text">
+                    <input id="pre_btn1" onclick="prev_step1()" type="button" value="Previous">
+                    <input id="next_btn2" name="next" onclick="next_step2()" type="button" value="Next">
+                </fieldset>
+                <fieldset id="third">
+                    <h2 class="title">Personal Details</h2>
+                    <p class="subtitle">Step 3</p>
+                   
+                    <input class="text_field" name="phone_number" placeholder="Phone Number" type="text">
+                    <label style="font-weight: bold;">Working</label>
+                    <input name="working" type="radio" value="YES">YES
+                    <input name="working" type="radio" value="NO">NO<BR><BR>
+                    <label style="font-weight: bold;">Gender</label>
+                    <input name="gender" type="radio" value="Male">Male
+                    <input name="gender" type="radio" value="Female">Female
+                    <input name="gender" type="radio" value="Others">Others
+                    <input class="text_field" name="jobtitle" placeholder="Job Title" type="text">
+                    <label for="img">Select image:</label><BR>
+                    <input type="file" id="img" name="img" accept="image/*"><BR>
+                    <label for="social">Add your socials:</label><BR>
+                    <input type="url" id="social" name="social" placeholder='URL'>
+                    <textarea name="address" placeholder="CurrentAddress"></textarea>
+                    
+
+
+            
+                    
+                    <input id="pre_btn2" onclick="prev_step2()" type="button" value="Previous">
+                    <input class="submit_btn" onclick="validation(event)" type="submit" value="Submit">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var navlinks = document.getElementById("navlinks");
+        function showMenu() {
+            navlinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navlinks.style.right = "-200px";
+        }
+    </script>
+
+    
+    <script src="{% static 'Reg/js/Registration.js'%}"></script>
+
+    {%endblock%}
+    
+    

@@ -1,0 +1,39 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'Reg/css/jobform.css' %}">
+</head>
+<body>
+    <h1>JOB POSTING FORM</h1>
+    <form action="{% url "jobs" %}" class="jobform" method="POST">
+        
+       {% csrf_token %}
+       
+            <h2 class="title">Enter Job Details</h2>
+            <p class="subtitle"></p>
+            <input class="text_field" name="jobname" placeholder="JOB TITLE" type="text">
+            <input class="#" name="desc" placeholder="Description" type="textarea"><br>
+            
+            <label for="cars">Choose Type:</label>
+            <select name="Type" class="dropdowntype">
+            <option value="FULL TIME">FULL TIME</option>
+            <option value="PART TIME">PART TIME</option>
+            </select><br>
+
+            
+            <input class="text_field" name="duration" palceholder="Duration" type="date">
+            <input class="text_field" name="salary" placeholder="Salary" type="number" >
+            <input type="url" name="link"   placeholder="URL "type="url">
+            <button type="submit">SUBMIT</button>
+    </form>
+
+
+            <script src="Reg/js/jobform.js"></script>
+</body>
+</html> 
+

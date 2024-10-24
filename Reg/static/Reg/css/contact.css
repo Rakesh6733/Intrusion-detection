@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+/*font-family: 'Tilt Warp', cursive;*/
+
+/* JJLKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK*/
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+
+
+nav {
+    display: flex;
+    padding: 1% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #008080;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: 'Tilt Warp', cursive;
+
+
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #008080;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+
+
+.nav-links ul li:hover::after {
+    width: 100%;
+
+}
+/* JJLKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* global styles */
+  body {
+    background-color: grey;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-image: url(images/20.png);
+    background-size: cover; /* or "cover" */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center center; /* Center the image */
+  }
+  
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 80px;
+    text-align: left;
+    margin-left: 250px;
+    text-transform: uppercase;
+    
+  }
+  
+  .contact-wrap {
+    max-width: 700px;
+    margin-left: 250px;
+    margin-top: 80px;
+    text-align: left;
+   
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start ;
+    width: 280px;
+    margin-left: -50px;
+    margin-top: -40px;
+  }
+  
+  .input-block {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    
+  }
+  
+  .form-control {
+    background-color:  #606D5D;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-size: 18px;
+    padding: 15px;
+    width: 100%;
+    height: 20px;
+    width: 350px;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .textarea {
+    position: relative;
+    text-align: left;
+  }
+  
+  .textarea label {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    color: #fff;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  .textarea textarea {
+    height: 100%;
+    resize: none;
+  }
+  
+  .textarea textarea:focus + label,
+  .textarea textarea:not(:placeholder-shown) + label {
+    top: -20px;
+    left: 10px;
+    font-size: 14px;
+    color: #000;
+  }
+  
+  .square-button {
+    background-color: #606D5D;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -10px;
+    padding: 15px 50px;
+    text-transform: uppercase;
+    margin-left: 65px;
+    
+  }
+  
+  @media screen and (max-width: 768px) {
+    .input-block {
+      width: 100%;
+    }
+    
+    .textarea textarea {
+      height: 150px;
+    }
+    
+    .square-button {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .nav-links ul li{
+      display: block;
+    }
+  
+    .nav-links {
+  
+      position: absolute;
+      background:yellow;
+      height: 100vh;
+      width: 200px;
+      top: 0;
+      right: -200px;
+      text-align: left;
+      z-index: 2;
+      transition: 1s;
+  }
+  nav .fa-solid{
+     display: block;
+     color: black;
+     margin: 10px;
+     font-size: 22px;
+     cursor: pointer;  
+  }
+  
+  
+  
+  .nav-links ul {
+    padding: 30px ;
+    flex-direction: column;
+  }
+    }
+
+
+    body{
+      margin-left: -180px;
+    }

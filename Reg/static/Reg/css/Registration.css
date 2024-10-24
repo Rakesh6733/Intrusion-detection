@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+/*font-family: 'Tilt Warp', cursive;*/
+
+
+  /* JJLKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK*/
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tilt Warp', cursive;
+
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+
+
+nav {
+    display: flex;
+    padding: 1% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+
+
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 2px;
+    position: relative;
+	
+	
+}
+
+.nav-links ul li a {
+    color: #008080;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+
+
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #008080;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+
+
+.nav-links ul li:hover::after {
+    width: 100%;
+
+}
+
+
+
+
+nav .fa-solid {
+    display: none;
+
+}
+
+/*ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff*/
+
+
+.content{
+
+
+margin-left: 450px;
+background-image: url(images/29.jpg);
+width:auto;
+margin-top:20px;
+
+}
+.main{
+float:left;
+width:650px;
+margin-top:80px auto;
+
+
+}
+#progressbar{
+margin:0;
+padding:0;
+font-size:18px
+}
+#active1{
+color:red
+}
+fieldset{
+display:none;
+width:350px;
+padding:20px;
+margin-top:50px;
+margin-left:85px;
+border-radius:5px;
+box-shadow:3px 3px 25px 1px black;
+background-color: #008080;
+}
+#first{
+display:block;
+width:350px;
+padding:20px;
+margin-top:50px;
+border-radius:5px;
+margin-left:85px;
+box-shadow:3px 3px 25px 1px black;
+}
+input[type=text],input[type=password],select{
+width:100%;
+margin:10px 0;
+height:40px;
+padding:5px;
+border:3px solid lightsalmon;
+border-radius:4px;
+justify-content: center;
+font-family: 'Tilt Warp', cursive;
+
+}
+
+span{
+	font-family: 'Tilt Warp', cursive;
+	margin-left: 90px;
+	margin-top: 10px;
+
+}
+
+.social-container {
+	display: flex;
+	justify-content: center; /* align links horizontally in center */
+	margin-top: 20px;
+  }
+  
+  .social {
+	display: inline-block;
+	margin: 0 10px; /* add space between links */
+	color: #1F2041 ; /* set link color */
+	font-size: 20px; /* set link icon size */
+  }
+  
+  .social:hover {
+	color: #FFFFFF; /* change link color on hover */
+  }
+  
+  .fa-facebook:before {
+	content: "\f09a"; /* add facebook icon using fontawesome */
+  }
+  
+  .fa-google-plus-g:before {
+	content: "\f0d5"; /* add google plus icon using fontawesome */
+  }
+  
+  .fa-linkedin:before {
+	content: "\f08c"; /* add linkedin icon using fontawesome */
+  }
+  
+
+input[type=email],input[type=email],select{
+	width:100%;
+	margin:10px 0;
+	height:40px;
+	padding:5px;
+	border:3px solid lightsalmon;
+	border-radius:4px;
+	justify-content: center;
+	font-family: 'Tilt Warp', cursive;
+}
+textarea{
+width:100%;
+margin:10px 0;
+height:70px;
+padding:5px;
+border:3px solid lightsalmon;
+border-radius:4px
+}
+input[type=submit],input[type=button]{
+width:120px;
+margin:15px 25px;
+padding:5px;
+height:40px;
+background-color:#a0522d;
+border:none;
+border-radius:4px;
+color:#fff;
+font-family: 'Tilt Warp', cursive;
+}
+h2,p{
+text-align:center;
+font-family: 'Tilt Warp', cursive;
+}
+li{
+margin-right:52px;
+display:inline;
+color:#c1c5cc;
+font-family: 'Tilt Warp', cursive;
+}
+/* For mobile screens */
+
+@media only screen and (max-width: 600px) {
+
+	/* Adjust the content div */
+	.content {
+	  margin-left: 0;
+	  background-image: none;
+	}
+  
+	/* Adjust the main div */
+	.main {
+	  width: 100%;
+	  margin-top: 20px;
+	}
+  
+	/* Adjust the fieldset and first divs */
+	fieldset, #first {
+	  width: 100%;
+	  margin-left: 0;
+	}
+  
+	/* Adjust the input, select, and textarea elements */
+	input[type=text], input[type=password], select, textarea {
+	  width: 90%;
+	  margin: 10px auto;
+	  height: 30px;
+	}
+  
+	/* Adjust the submit and button elements */
+	input[type=submit], input[type=button] {
+	  width: 80px;
+	  margin: 15px auto;
+	  height: 30px;
+	}
+  
+	/* Adjust the li elements */
+	li {
+	  margin-right: 20px;
+	}
+  
+  }
+  
+
+  @media screen and (max-width: 700px) {
+  .nav-links ul li{
+    display: block;
+  }
+
+  .nav-links {
+
+    position: absolute;
+    background:yellow;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+}
+nav .fa-solid{
+   display: block;
+   color: black;
+   margin: 10px;
+   font-size: 22px;
+   cursor: pointer;  
+}
+
+
+
+.nav-links ul {
+  padding: 30px ;
+  flex-direction: column;
+}
+  }

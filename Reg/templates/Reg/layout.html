@@ -1,0 +1,48 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>{% block head_title %}{% endblock %}</title>
+    {%block head%}
+    {%endblock%}
+    {% block extra_head %}
+    {% endblock %}
+    </head>
+
+    <body>
+        <nav>
+            <a href="{% url "home" %}"><img src="{% static 'Reg/images/LOGO.jpg' %}"></a>
+            <div class="nav-links" id="navlinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="{% url "home" %}">HOME</a></li>
+                        <li><a href="{% url "about" %}">ABOUT</a></li>
+                        <li><a href="{% url "news" %}">NEWS</a></li>
+                        <li><a href="{% url "gallery" %}">GALLERY</a></li>
+                        <li><a href="{% url "alumni" %}">ALUMNI</a></li>
+                        <li><a href="{% url "contact" %}">CONTACT</a></li>
+                        <li><a href="{% url "reg" %}">CREATE ACCOUNT</a></li>
+                        <li><a href="{% url "login" %}">LOG IN</a></li>
+                        <li><a href="{% url "jobs" %}">FIND JOBS</a></li>
+                        <li><a href="{% url "jobform"%}">POST</a></li>
+                        <li><img class="rounded-circle shadow-4-strong" alt="avatar2" src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp" /></li>
+                        
+                </ul>
+    
+    
+    
+            </div>
+    
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        {%block body%}
+        {%endblock%}
+
+         {% block content %}
+    {% endblock %}
+    {% block extra_body %}
+    {% endblock %}
+    </body>
+
+    
+</html>

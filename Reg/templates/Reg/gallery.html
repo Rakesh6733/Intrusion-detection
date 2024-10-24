@@ -1,0 +1,55 @@
+{%extends 'Reg/layout.html'%}
+{%load static%}
+
+
+
+{%block head%}
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'Reg/css/gallery.css'%}">
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+	<script src="https://kit.fontawesome.com/4fd880aedc.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+{%endblock%}
+
+{%block body%}
+
+<!--------------navbar code-->
+
+<!--------------navbar code-->
+    <h1 >PHOTO GALLERY</h1>
+<div class="gallery">
+	{%for photo in photos%}
+	{%if photo.upload %}
+	<div class="gallery__column">
+			<figure class="gallery__thumb">
+				<input type="image" src="{% static 'Reg/images/pexels-pixabay-268533.jpg' %}" alt="{{photo.title}}" class="gallery__image" width="100" height="100">
+				<figcaption class="gallery__caption">{{photo.title}}</figcaption>
+			</figure>
+	</div>
+	{%else%}
+	<div class="gallery__column">
+		<figure class="gallery__thumb">
+			<input type="image" src="{{photo.url}}" alt="{{photo.title}}" class="gallery__image" width="100" height="100">
+			<figcaption class="gallery__caption">{{photo.title}}</figcaption>
+		</figure>
+	</div>
+	{%endif%}
+	{%endfor%}
+</div>
+
+
+<script>
+	var navlinks = document.getElementById("navlinks");
+	function showMenu() {
+		navlinks.style.right = "0";
+	}
+
+	function hideMenu() {
+		navlinks.style.right = "-200px";
+	}
+</script>
+
+{%endblock%}
+ 
+
+
